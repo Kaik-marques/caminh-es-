@@ -2368,3 +2368,149 @@ a {
         margin-bottom: 25px;
     }
 }
+
+/* ============================================
+   SEÇÃO: COMO VOCÊ RECEBE O SEU ACESSO?
+   ============================================ */
+
+.delivery-process {
+    background-color: var(--bg-dark);
+}
+
+.delivery-process .section-header h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.delivery-process .section-header p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+.process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 20px;
+}
+
+.process-step-card {
+    background: #161616;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    padding: 32px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.process-step-card:hover {
+    border-color: rgba(204, 41, 41, 0.35);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5), 0 0 25px rgba(204, 41, 41, 0.08);
+}
+
+/* Badge PASSO 0X */
+.step-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-red);
+    border: 1px solid rgba(204, 41, 41, 0.45);
+    background: rgba(204, 41, 41, 0.08);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 22px;
+}
+
+/* Wrapper do ícone */
+.process-icon-wrap {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(204, 41, 41, 0.08);
+    border: 1px solid rgba(204, 41, 41, 0.2);
+    border-radius: 14px;
+    margin: 0 auto 22px auto;
+    color: var(--accent-red);
+    align-self: center;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.process-step-card:hover .process-icon-wrap {
+    background: rgba(204, 41, 41, 0.14);
+    border-color: rgba(204, 41, 41, 0.4);
+}
+
+.process-icon-wrap svg {
+    width: 30px;
+    height: 30px;
+    stroke: var(--accent-red);
+}
+
+/* Título do passo */
+.process-step-card h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 12px;
+    font-family: var(--font-heading);
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* Descrição */
+.process-step-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+/* Destaque verde */
+.step-highlight {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #00e5a0;
+    align-self: center;
+    margin-top: auto;
+}
+
+/* Cartão do meio — ligeiramente maior */
+.process-step-card.reveal-up {
+    padding-top: 38px;
+    padding-bottom: 34px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .process-steps-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .process-step-card {
+        padding: 28px 22px;
+    }
+
+    .delivery-process .section-header h2 {
+        font-size: 1.6rem;
+    }
+}
